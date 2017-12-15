@@ -10,6 +10,28 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
+ *= require_tree
  *= require_self
  */
+
+html {
+  font-size: 12px;
+}
+
+body {
+  color: #283c46;
+  background-color: #f5efe6;
+  line-height: 1.5;
+  margin-top: 0;
+  font-size: 1.7rem;
+}
+
+main.container {
+  margin-top: 4rem;
+}
+
+@media (min-width: 48em) {
+  .container {
+    max-width: 68rem;
+  }
+}
