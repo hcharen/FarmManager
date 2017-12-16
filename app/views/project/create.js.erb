@@ -1,8 +1,7 @@
-// assign 'project list' to 'project_card' view and a new empty div
+
 var projectList = document.getElementById('project-list')
 var projectPopover = document.getElementById('new-project-popover')
 var projectNameInput = document.getElementById('project-name-input')
-// will render the partial!
 var newProject = "<%= escape_javascript(render "project_card.html", project: @project) %>"
 var div = document.createElement('div')
 

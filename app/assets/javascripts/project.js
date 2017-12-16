@@ -25,7 +25,7 @@ document.addEventListener('turbolinks:load', function () {
 }
 // for handling errors from the project form submission
 project.Form.addEventListener('ajax:error', function (xhr, status, err) {
-  console.log(xhr)
+  console.log xhr
 
   // supply erro class to the project name input
   projectName.classList.add('is-invalid')
