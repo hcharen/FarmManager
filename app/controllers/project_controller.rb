@@ -3,7 +3,6 @@ class ProjectController < ApplicationController
     @projects = Project.all
     # will create a new instance of a Project object, this object will be passed to a rails form helper within project#index
     @project = Project.new
-
   end
 
   def show
@@ -29,6 +28,12 @@ class ProjectController < ApplicationController
   end
 
   def delete
+  end
+
+  def chat
+    @message = Message.new
+    @messages = Message.where project_id: params[:id]
+    @project = Project.find(params[:id])
   end
 
 private

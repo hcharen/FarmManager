@@ -1,7 +1,7 @@
 <main class="container-home">
 <h1 class="project-title text-center"><%= @project.name %></h1>
 <div class="row">
-      <%= render "feature_card", feature_link: '', title: "The Lounge", description: "Hangout and chat about horse related stuff..." %>
+      <%= render "feature_card", feature_link: project_chat_path(@project.id), title: "The Lounge", description: "Hangout and chat about horse related stuff..." %>
       <%= render "feature_card", feature_link: '', title: "Important Information", description: "Important updates regarding barn schedule and horses" %>
       <%= render "feature_card", feature_link: '', title: "To-dos", description: "Make a list of shit that needs to get done" %>
       <%= render "feature_card", feature_link: '', title: "Show Schedule", description: "BOW Show Season" %>

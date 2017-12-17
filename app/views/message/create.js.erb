@@ -1,0 +1,8 @@
+var chatContainer = document.getElementById('chat-contents');
+var chatInput = document.getElementById('message-input');
+var paragraph = document.createElement('p')
+
+paragraph.innerHTML = "<%= @message.content %>"
+
+chatContainer.appendChild(paragraph;
+chatInput.value = '';
