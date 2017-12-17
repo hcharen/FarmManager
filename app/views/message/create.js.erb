@@ -1,8 +1,9 @@
 var chatContainer = document.getElementById('chat-contents');
 var chatInput = document.getElementById('message-input');
-var paragraph = document.createElement('p')
+var message = "<%= escape_javascript(render"message.html", message: @message) %>";
+var div = document.createElement('div');
 
-paragraph.innerHTML = "<%= @message.content %>"
+div.innerHTML = message
 
-chatContainer.appendChild(paragraph;
+chatContainer.appendChild(div.firstChild);
 chatInput.value = '';
