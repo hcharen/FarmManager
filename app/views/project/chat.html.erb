@@ -1,0 +1,19 @@
+<h1>HELLO CHAT!</h1>
+
+<main class="container home">
+  <%= render "project_nav.html.erb", feature_name: "The Lounge" %>
+  <div class="chat-wrapper feature-card">
+    <div id="chat-contents" class="chat-contents">
+      <% @messages.each do |message| %>
+      <%= render 'message/message.html.erb' %>
+      <% end %>
+    </div>
+    <div class="form-group">
+    <%= form_with(model: @message, url: "/messages", html: { id: "new-message-form", class: "chat-form", remote: true} ) do |f| %>
+      <%= f.hidden_field :project_id, value: @project.id %>
+      <%= f.text_field :content, class: "form-control", id: "message-input", placeholder: "One ladies stretched out breeches is another ladies's perfect fit", autoFocus: true %>
+    </div>
+    <% end %>
+
+  </div>
+</main>
