@@ -1,6 +1,6 @@
 var chatContainer = document.getElementById('chat-contents');
 var chatInput = document.getElementById('message-input');
-var message = "<%= escape_javascript (render "message.html", message: @message) %>";
+var message = "<%= escape_javascript (render "message.html", message: @m) %>";
 var div = document.createElement('div');
 
 div.innerHTML = message

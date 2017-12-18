@@ -34,6 +34,7 @@ class ProjectController < ApplicationController
     @message = Message.new
     @messages = Message.all.where project_id: params[:id]
     @project = Project.find(params[:id])
+    @m = @project.messages.find_by(project_id: params[:id])
   end
 
 private
