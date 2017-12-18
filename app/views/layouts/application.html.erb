@@ -11,14 +11,17 @@
 
   <body>
     <%= render "layouts/navbar.html" %>
+    <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
 
     <%= yield %>
     <script>
-      <% if @project.id %>
-      window.projectId = "<%= @project.id %>";
-      <% else %>
-      window.projectId = null;
-      <% end %>
-    </script>
+  <% if @project.id %>
+    window.projectId = "<%= @project.id %>";
+  <% else %>
+    window.projectId = null
+  <% end %>
+</script>
+
   </body>
 </html>

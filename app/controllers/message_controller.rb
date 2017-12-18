@@ -10,6 +10,10 @@ class MessageController < ApplicationController
     end
   end
 
+  def show
+
+  end
+
   private
 
   def message_params

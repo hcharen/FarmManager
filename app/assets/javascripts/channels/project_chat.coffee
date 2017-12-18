@@ -2,7 +2,6 @@ document.addEventListener 'turbolinks:load', ->
   messageForm = document.getElementById('new-message-form')
   messageInput = document.getElementById('message-input')
   messageContainer = document.getElementById('chat-contents')
-
   if window.projectId and messageForm
     App.project_chat = App.cable.subscriptions.create({
       channel: 'ProjectChatChannel'
@@ -18,10 +17,10 @@ document.addEventListener 'turbolinks:load', ->
       received: (data) ->
         messageNode = document.createElement('div')
         messageNode.innerHTML = data.message
-        messageContainer.appendChild(messageNode)
+        messageContainer.appendChild messageNode
         # Called when there's incoming data on the websocket for this channel
         return
-      sendMessage: (message) ->
+      sendMessage: (message, project_id) ->
         @perform 'send_message',
           content: content
           project_id: window.projectId
