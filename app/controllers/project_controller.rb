@@ -32,9 +32,8 @@ class ProjectController < ApplicationController
 
   def chat
     @message = Message.new
-    @messages = Message.all.where project_id: params[:id]
+    @messages = Message.last(15)
     @project = Project.find(params[:id])
-    @m = @project.messages.find_by(project_id: params[:id])
   end
 
 private

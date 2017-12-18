@@ -11,6 +11,7 @@ class MessageController < ApplicationController
   end
 
   def show
+
   end
 
   private

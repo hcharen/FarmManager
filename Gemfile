@@ -7,6 +7,10 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails
+gem 'redis'
+
+gem 'devise'
+
 gem 'rb-readline'
 
 gem 'jquery-rails'
